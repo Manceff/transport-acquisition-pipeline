@@ -1,12 +1,12 @@
-# Pipeline d'Acquisition — Transport & Logistique France
+# Pipeline d'acquisition Transport & Logistique France
 
 Pipeline n8n pour identifier, enrichir et scorer des PME françaises de transport et logistique, dans le cadre d'une recherche de cibles d'acquisition. Mission ponctuelle pour un client.
 
-![Workflow n8n complet — 33 nœuds, Google Maps + Pappers + Dropcontact + scoring + sortie Sheets/Excel/email](docs/screenshots/n8n-workflow.png)
+![Workflow n8n complet, 33 nœuds qui croisent Google Maps, Pappers et Dropcontact pour produire un Google Sheet et un rapport email](docs/screenshots/n8n-workflow.png)
 
 ## Le besoin
 
-Quelqu'un en recherche de cibles d'acquisition dans le transport-logistique m'a contacté. Il voulait une liste qualifiée d'entreprises à approcher, avec leurs comptes sociaux, le nom du dirigeant, et un email direct. Il faisait ce travail à la main — Google Maps, puis Pappers, puis LinkedIn, puis enrichissement email — ça lui prenait plusieurs jours par run et c'était impossible à reproduire d'une zone à l'autre.
+Quelqu'un en recherche de cibles d'acquisition dans le transport-logistique m'a contacté. Il voulait une liste qualifiée d'entreprises à approcher, avec leurs comptes sociaux, le nom du dirigeant, et un email direct. Il faisait ce travail à la main : Google Maps, puis Pappers, puis LinkedIn, puis enrichissement email. Ça lui prenait plusieurs jours par run et c'était impossible à reproduire d'une zone à l'autre.
 
 L'idée était de remplacer ce process manuel par un pipeline qu'il pouvait relancer lui-même.
 
@@ -32,23 +32,23 @@ L'idée était de remplacer ce process manuel par un pipeline qu'il pouvait rela
 | Critère | Points |
 |---|---|
 | CA entre 1 M€ et 50 M€ | +30 |
-| Effectif 10–250 salariés | +20 |
+| Effectif 10 à 250 salariés | +20 |
 | Entreprise créée avant 2005 | +20 |
 | Résultat net positif | +15 |
 | Site web présent | +5 |
 | Email dirigeant trouvé | +10 |
 
-Trois catégories en sortie : **Cible Prioritaire** (≥ 70), **À Qualifier** (40–69), **Faible Potentiel** (< 40). Seuils calibrés avec le client sur un échantillon manuel de 50 entreprises avant de lancer le run complet.
+Trois catégories en sortie : **Cible Prioritaire** (≥ 70), **À Qualifier** (40 à 69), **Faible Potentiel** (< 40). Seuils calibrés avec le client sur un échantillon manuel de 50 entreprises avant de lancer le run complet.
 
 ## Coût d'un run complet
 
-Pour 480 combinaisons et ~2 500 entreprises traitées :
+Pour 480 combinaisons et environ 2 500 entreprises traitées :
 
 | Service | Volume | Coût |
 |---|---|---|
 | Google Maps | ~4 000 requêtes | ~90 $ |
 | Pappers (plan Pro) | ~2 500 requêtes | inclus, 49 €/mois |
-| Dropcontact | 500–800 enrichissements | inclus, 24 €/mois |
+| Dropcontact | 500 à 800 enrichissements | inclus, 24 €/mois |
 
 ## Stack
 
