@@ -2,6 +2,8 @@
 
 Pipeline n8n pour identifier, enrichir et scorer des PME françaises de transport et logistique, dans le cadre d'une recherche de cibles d'acquisition. Mission ponctuelle pour un client.
 
+![Workflow n8n complet — 33 nœuds, Google Maps + Pappers + Dropcontact + scoring + sortie Sheets/Excel/email](docs/screenshots/n8n-workflow.png)
+
 ## Le besoin
 
 Quelqu'un en recherche de cibles d'acquisition dans le transport-logistique m'a contacté. Il voulait une liste qualifiée d'entreprises à approcher, avec leurs comptes sociaux, le nom du dirigeant, et un email direct. Il faisait ce travail à la main — Google Maps, puis Pappers, puis LinkedIn, puis enrichissement email — ça lui prenait plusieurs jours par run et c'était impossible à reproduire d'une zone à l'autre.
